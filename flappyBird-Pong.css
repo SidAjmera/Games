@@ -1,0 +1,39 @@
+.bigClass {
+     font-size: 100px;
+  }
+  
+  .greenClass {
+     color: green;
+     text-shadow: 0 0 5px lime;
+  }
+  
+  .normal {
+     font-size: 3em;
+     text-transform: uppercase;
+     color: orange;
+  }
+  
+  .flash {
+     background: orange;
+     color: yellow;
+  }
+  
+  .hide {
+     display: none;
+  }
+  
+  .show {
+     display: block;
+  }
+  
+  .big {
+     font-size: 5em;
+  }
+  
+  .bigger {
+     font-size: 7em;
+  }
+  
+  .complete {
+     text-decoration: line-through;
+  }
