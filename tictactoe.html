@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="tictactoe.css">
+    <style>
+        .back-button {
+            background: linear-gradient(90deg, #4CAF50, #45a049); /* Gradient background */
+            border: none; /* Remove borders */
+            color: white; /* White text */
+            padding: 15px 32px; /* Some padding */
+            text-align: center; /* Centered text */
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Make the button inline */
+            font-size: 18px; /* Increase font size */
+            margin: 4px 2px; /* Add some margin */
+            cursor: pointer; /* Pointer cursor on hover */
+            border-radius: 12px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+            transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+        }
+    
+        .back-button:hover {
+            background: linear-gradient(90deg, #45a049, #4CAF50); /* Darker gradient on hover */
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -24,6 +46,6 @@
         <button id="restartButton">Restart Game</button>
     </div>
     <script src="tictactoe.js"></script>
-    <a href="index.html"><button>Back to home</button></a>
+    <a href="index.html"><button class="back-button">Back to home</button></a>
 </body>
 </html> 
