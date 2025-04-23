@@ -25,6 +25,7 @@ var score = 0;
 var FBhighScore = 0;
 var ready = true;
 var highScoreSaved = false;
+var computerScore = 0;
 
 
 // Set image source
@@ -160,3 +161,43 @@ function game(){
 const fps = 60;
 
 setInterval(game, 1000/fps);
+
+// New function to end the game
+function endGame(winner) {
+     state = "over";
+     // Display winner message
+     ctx.fillStyle = "white";
+     ctx.fillText(winner + " won!", canvas.width / 2 - 50, canvas.height / 2);
+     // Show restart button
+     showRestartButton();
+}
+
+// Function to show restart button
+function showRestartButton() {
+     const restartButton = document.createElement("button");
+     restartButton.innerText = "Restart";
+     restartButton.style.position = "absolute";
+     restartButton.style.top = "50%";
+     restartButton.style.left = "50%";
+     restartButton.style.transform = "translate(-50%, -50%)";
+     document.body.appendChild(restartButton);
+     restartButton.onclick = function() {
+          document.body.removeChild(restartButton);
+          resetGame();
+     };
+}
+
+// Function to reset the game
+function resetGame() {
+     // Reset game variables
+     bx = 25;
+     by = 256;
+     yvel = 0;
+     pipeX = canvas.width - 20;
+     pipeNorthY = Math.floor(Math.random() * 201) - 200;
+     pipeSouthY = pipeNorthY + 320 + 70;
+     score = 0;
+     computerScore = 0; // Reset computer score
+     state = "ready";
+     ready = true;
+}
